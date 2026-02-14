@@ -1,7 +1,7 @@
 function checkPassword(){
   const pass = document.getElementById("password").value;
 
-  if(pass === "13/04/2025"){
+  if(pass === "13/04/2025"){   // cambiá fecha si querés
     document.getElementById("login-screen").style.display = "none";
     document.getElementById("main-content").classList.remove("hidden");
 
@@ -13,7 +13,7 @@ function checkPassword(){
   }
 }
 
-/* 🎵 MUSICA */
+/* MUSICA */
 function iniciarMusica(){
   const music = document.getElementById("music");
   music.loop = true;
@@ -31,7 +31,7 @@ function iniciarMusica(){
   },200);
 }
 
-/* ❤️ CORAZONES */
+/* CORAZONES */
 function crearCorazones(){
   const cont = document.querySelector(".floating-hearts");
 
@@ -54,13 +54,44 @@ puede que no sea el mas listo, ni el mas apto, ni el mas fuerte, pero te prometo
 me preparo para cualquier situacion y muevo montañas enteras porque sos esa chispa que enciende mis metas 
 y nunca nadie te podra igualar...`;
 
-const texto2 = `Entre problemas y mundos destruidos voy a extender mi mano para que puedas alzarte y ver que el mundo entero es tuyo, que los buenos momentos los armamos juntos, que la historia que armamos nosotros prevalecerá y al final estaremos los dos brillando como nunca lo hicimos antes, para que mires atras y veas que yo voy a estar para vos en todo momento y que cuando mires hacia adelante tambien voy a estar yo esperandote para siempre dar el siguiente paso juntos, te amo con el alma candu, siempre para vos dylan <3`;
+const texto2 = `Entre problemas y mundos destruidos voy a extender mi mano para que puedas alzarte y ver que el mundo entero es tuyo, 
+que los buenos momentos los armamos juntos, que la historia que armamos nosotros prevalecerá y al final estaremos los dos brillando 
+como nunca lo hicimos antes, para que mires atras y veas que yo voy a estar para vos en todo momento y que cuando mires hacia adelante 
+tambien voy a estar yo esperandote para siempre dar el siguiente paso juntos, te amo con el alma ❤️`;
 
-const textoUltraFinal = `Y si para nuestro amor no encuentro un buen adjetivo
-es porque te amo mucho, mucho más del te amo que te digo.
+let index = 0;
+let textos = [texto1, texto2];
 
-Lo más lindo del mar es cuando por completo
-lo moja la hermosura de tu pelo.
-Lo gracioso del sol es cuando no ve nada,
+function escribirMensaje(texto, callback){
+  const cont = document.getElementById("mensaje");
+  cont.innerHTML = "";
+  let i = 0;
 
-::contentReference[oaicite:0]{index=0}
+  const intervalo = setInterval(()=>{
+    cont.innerHTML += texto.charAt(i);
+    i++;
+    if(i >= texto.length){
+      clearInterval(intervalo);
+      if(callback) callback();
+    }
+  },25);
+}
+
+function escribirMensaje1(){
+  escribirMensaje(textos[0], ()=>{
+    document.getElementById("siguienteBtn").style.display = "inline-block";
+  });
+}
+
+function siguienteTexto(){
+  index++;
+
+  if(index < textos.length){
+    document.getElementById("siguienteBtn").style.display = "none";
+    escribirMensaje(textos[index], ()=>{
+      if(index < textos.length-1){
+        document.getElementById("siguienteBtn").style.display = "inline-block";
+      }
+    });
+  }
+}
