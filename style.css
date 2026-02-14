@@ -159,3 +159,51 @@ body{
   position:relative;
   z-index:10;
 }
+#siguienteBtn{
+  margin-top:25px;
+  padding:14px 28px;
+  font-size:18px;
+  border:none;
+  border-radius:20px;
+  background:#ff2e63;
+  color:white;
+  cursor:pointer;
+  box-shadow:0 6px 18px rgba(0,0,0,0.3);
+  transition:0.3s;
+}
+
+#siguienteBtn:hover{
+  transform:scale(1.1);
+  background:#ff4d7f;
+}
+@media (max-width:768px){
+
+  body{
+    overflow:auto;
+  }
+
+  .polaroid img{
+    width:140px;
+  }
+
+  .mensaje-box{
+    width:85%;
+    padding:25px;
+    top:55%;
+  }
+
+  #mensaje{
+    font-size:18px;
+  }
+
+  .heart{
+    width:260px;
+    height:260px;
+  }
+
+  .heart:before,
+  .heart:after{
+    width:260px;
+    height:260px;
+  }
+}
