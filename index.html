@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Para vos ❤️</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para vos ❤️</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- PANTALLA CONTRASEÑA -->
+<!-- LOGIN -->
 <div id="login-screen">
   <div class="heart">
     <div class="login-box">
@@ -19,40 +20,36 @@
   </div>
 </div>
 
-<!-- CONTENIDO PRINCIPAL -->
+<!-- MAIN -->
 <div id="main-content" class="hidden">
 
-  <!-- Música -->
+  <!-- música -->
   <audio id="music" loop>
-    <source src="musica.mp3" type="audio/mp3">
+    <source src="AIRBAG - NUNCA LO OLVIDES.mp3" type="audio/mp3">
   </audio>
 
-  <!-- Fotos polaroid -->
+  <!-- fondo corazones -->
+  <div class="floating-hearts"></div>
+
+  <!-- fotos -->
   <div class="polaroid-container">
-
-    <div class="polaroid" style="top:10%; left:8%;">
-      <img src="foto1.jpg">
+    <div class="polaroid" style="top:8%; left:5%;">
+      <img src="WhatsApp Image 2026-02-14 at 02.01.21 (1).jpeg">
     </div>
 
-    <div class="polaroid" style="top:55%; left:20%;">
-      <img src="foto2.jpg">
+    <div class="polaroid" style="top:55%; left:18%;">
+      <img src="WhatsApp Image 2026-02-14 at 02.01.21.jpeg">
     </div>
 
-    <div class="polaroid" style="top:25%; right:10%;">
-      <img src="foto3.jpg">
+    <div class="polaroid" style="top:18%; right:8%;">
+      <img src="WhatsApp Image 2026-02-14 at 02.01.22.jpeg">
     </div>
-
   </div>
 
-  <!-- Carta -->
-  <div class="mensaje">
-    Lo siento por los inicios malos, las malas mañanas o las peleas por estupideces,
-    pero te prometo que en cada momento de la vida, en cada latido de mi corazon
-    hay una parte tuya que siempre resuena en mi, puede que no sea el mas listo,
-    ni el mas apto, ni el mas fuerte, pero te prometo que por vos aprendo libros
-    de memoria, me preparo para cualquier situacion y muevo montañas enteras porque
-    sos esa chispa que enciende mis metas y nunca nadie te podra igualar,
-    feliz san Valentín ❤️
+  <!-- mensaje -->
+  <div class="mensaje-box">
+    <div id="mensaje"></div>
+    <div class="firma">❤️ Feliz San Valentín ❤️</div>
   </div>
 
 </div>
