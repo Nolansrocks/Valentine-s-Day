@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para vos ❤️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<!-- PANTALLA CONTRASEÑA -->
+<div id="login-screen">
+  <div class="heart">
+    <div class="login-box">
+      <h2>¿Qué día es el día que nos hicimos novios?<br>dd/mm/aaaa</h2>
+      <input type="password" id="password" placeholder="Escribí la fecha..." />
+      <button onclick="checkPassword()">Entrar</button>
+      <p id="error"></p>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENIDO PRINCIPAL -->
+<div id="main-content" class="hidden">
+
+  <!-- Música -->
+  <audio id="music" loop>
+    <source src="musica.mp3" type="audio/mp3">
+  </audio>
+
+  <!-- Fotos polaroid -->
+  <div class="polaroid-container">
+
+    <div class="polaroid" style="top:10%; left:8%;">
+      <img src="foto1.jpg">
+    </div>
+
+    <div class="polaroid" style="top:55%; left:20%;">
+      <img src="foto2.jpg">
+    </div>
+
+    <div class="polaroid" style="top:25%; right:10%;">
+      <img src="foto3.jpg">
+    </div>
+
+  </div>
+
+  <!-- Carta -->
+  <div class="mensaje">
+    Lo siento por los inicios malos, las malas mañanas o las peleas por estupideces,
+    pero te prometo que en cada momento de la vida, en cada latido de mi corazon
+    hay una parte tuya que siempre resuena en mi, puede que no sea el mas listo,
+    ni el mas apto, ni el mas fuerte, pero te prometo que por vos aprendo libros
+    de memoria, me preparo para cualquier situacion y muevo montañas enteras porque
+    sos esa chispa que enciende mis metas y nunca nadie te podra igualar,
+    feliz san Valentín ❤️
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
