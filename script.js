@@ -67,3 +67,43 @@ function escribirTexto(){
   }
   escribir();
 }
+const texto1 = "Feliz San Valentín mi amor ❤️";
+
+const textoFinal = `Entre problemas y mundos destruidos voy a extender mi mano para que puedas alzarte y ver que el mundo entero es tuyo, que los buenos momentos los armamos juntos, que la historia que armamos nosotros prevalecerá y al final estaremos los dos brillando como nunca lo hicimos antes, para que mires atras y veas que yo voy a estar para vos en todo momento y que cuando mires hacia adelante tambien voy a estar yo esperandote para siempre dar el siguiente paso juntos, te amo con el alma candu, siempre para vos dylan <3`;
+
+let escribiendo = false;
+
+function escribirTexto(texto, callback){
+  const cont = document.getElementById("mensaje");
+  cont.innerHTML = "";
+  let i = 0;
+  escribiendo = true;
+
+  function escribir(){
+    if(i < texto.length){
+      cont.innerHTML += texto.charAt(i);
+      i++;
+      setTimeout(escribir, 35);
+    }else{
+      escribiendo = false;
+      if(callback) callback();
+    }
+  }
+  escribir();
+}
+
+function escribirMensaje1(){
+  escribirTexto(texto1, ()=>{
+    document.getElementById("siguienteBtn").style.display="inline-block";
+  });
+}
+
+function siguienteTexto(){
+  if(escribiendo) return;
+
+  document.getElementById("siguienteBtn").style.display="none";
+
+  escribirTexto(textoFinal, ()=>{
+    document.querySelector(".firma").style.opacity="1";
+  });
+}
